@@ -1,0 +1,113 @@
+.values-wrapper {
+  background-color: var(--background-dark);
+  padding: 100px 0;
+}
+
+.section-title {
+  color: var(--text-light);
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.title-separator.mx-auto {
+  width: 80px;
+  height: 3px;
+  background-color: var(--accent-color);
+  margin-bottom: 40px;
+  border-radius: 2px;
+}
+
+.value-card {
+  /* background-color: var(--background-medium); */
+  background: linear-gradient(
+    145deg,
+    var(--background-medium) 0%,
+    rgba(11, 43, 38, 0.3) 100%
+  );
+  border-radius: 16px;
+  border: 1px solid rgba(190, 182, 155, 0.3);
+  padding: 50px 30px;
+  text-align: center;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value-card:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(5, 31, 32, 0.5);
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(190, 182, 155, 0.5);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.value-number-wrapper {
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 2px;
+  display: inline-block;
+}
+
+.value-number {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--accent-color);
+  line-height: 0.8;
+  display: block;
+  clip-path: inset(0 0 15% 0);
+  margin-bottom: -10px;
+}
+
+.value-title {
+  color: var(--text-light);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+.value-text {
+  color: var(--text-light);
+  opacity: 0.7;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1199px) {
+  .value-card {
+    padding: 40px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .values-wrapper {
+    padding: 70px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .value-number {
+    font-size: 4rem;
+  }
+
+  .value-title {
+    font-size: 1.1rem;
+  }
+
+  .value-text {
+    font-size: 0.9rem;
+  }
+}
