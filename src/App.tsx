@@ -9,6 +9,9 @@ const Tours = lazy(() => import("./pages/Tours/Tours"));
 const About = lazy(() => import("./pages/About/About"));
 const Blog = lazy(() => import("./pages/Blog/Blog"));
 
+// import "./index.css";
+// import "./global.css";
+
 function App() {
   return (
     <BrowserRouter>

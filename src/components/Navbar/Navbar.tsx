@@ -1,9 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { Offcanvas } from "bootstrap";
 import "./Navbar.css";
 
 const Navbar: React.FC = () => {
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
+      }
+      setLastScrollY(currentScrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   const closeOffcanvas = () => {
     const offcanvasElement = document.getElementById("mobileMenu");
     if (offcanvasElement) {
@@ -15,7 +35,11 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="navbar-wrapper shadow-sm">
+    <header
+      className={`navbar-wrapper shadow-sm ${
+        showNavbar ? "navbar-show" : "navbar-hide"
+      }`}
+    >
       <div className="container-fluid max-w-container h-100 d-flex align-items-center">
         <div className="nav-left">
           <Link to="/" className="logo-link">
