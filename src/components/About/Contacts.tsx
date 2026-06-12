@@ -12,7 +12,6 @@ const Contacts: React.FC = () => {
         </div>
 
         <div className="row g-4 justify-content-center">
-          {/* Карточка Телефон */}
           <div className="col-12 col-md-6 col-lg-4">
             <div className="contact-card">
               <div className="contact-icon-wrapper">
@@ -41,7 +40,6 @@ const Contacts: React.FC = () => {
             </div>
           </div>
 
-          {/* Карточка Почта */}
           <div className="col-12 col-md-6 col-lg-4">
             <div className="contact-card">
               <div className="contact-icon-wrapper">
@@ -74,7 +72,6 @@ const Contacts: React.FC = () => {
             </div>
           </div>
 
-          {/* Карточка Офис */}
           <div className="col-12 col-md-6 col-lg-4">
             <div className="contact-card">
               <div className="contact-icon-wrapper">

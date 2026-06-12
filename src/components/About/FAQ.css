@@ -1,0 +1,119 @@
+.faq-wrapper {
+  background-color: #010808;
+  padding: 100px 0;
+}
+
+.faq-subtitle {
+  display: block;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.faq-accordion-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-accordion .ui-accordion-header-icon {
+  display: none !important;
+}
+
+.faq-accordion .ui-accordion-header {
+  background-color: var(--background-medium);
+  color: var(--text-light);
+  border: 1px solid rgba(190, 182, 155, 0.15);
+  border-radius: 12px;
+
+  padding: 22px 70px 22px 32px !important;
+
+  margin-top: 20px !important;
+
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.faq-accordion .ui-accordion-header:first-child {
+  margin-top: 0 !important;
+}
+
+.faq-accordion .ui-accordion-header:hover {
+  border-color: rgba(190, 182, 155, 0.5);
+  background-color: rgba(11, 43, 38, 0.8);
+}
+
+.faq-accordion .ui-accordion-header-active {
+  border-color: var(--accent-color);
+  background-color: rgba(11, 43, 38, 1);
+  color: var(--accent-color);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-color: transparent;
+}
+
+.faq-accordion .ui-accordion-header::after {
+  content: "+";
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--accent-color);
+  transition: all 0.3s ease;
+  line-height: 1;
+}
+
+.faq-accordion .ui-accordion-header-active::after {
+  content: "−";
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-accordion .ui-accordion-content {
+  background-color: rgba(11, 43, 38, 0.3);
+  color: var(--text-light);
+
+  border: 1px solid var(--accent-color);
+  border-top: none;
+
+  border-radius: 0 0 12px 12px;
+
+  padding: 25px 35px !important;
+
+  margin-bottom: 20px;
+
+  font-size: 1.05rem;
+  line-height: 1.7;
+
+  box-sizing: border-box;
+}
+
+.faq-accordion .ui-accordion-content p {
+  margin: 0;
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .faq-wrapper {
+    padding: 70px 0;
+  }
+
+  .faq-accordion .ui-accordion-header {
+    font-size: 1.05rem;
+    padding: 18px 45px 18px 20px;
+  }
+
+  .faq-accordion .ui-accordion-content {
+    padding: 20px;
+    font-size: 0.95rem;
+  }
+}
