@@ -12,6 +12,18 @@
   --text-dark: #051f20;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  font-family: Inter, sans-serif;
+}
+
 /* ф:root {
   --text: #6b6375;
   --text-h: #08060d;

@@ -1,8 +1,10 @@
+import Hero from "../../components/Home/Hero/Hero";
+
 function Home() {
   return (
-    <div className="container">
-      <h1>Главная страница</h1>
-    </div>
+    <>
+      <Hero />
+    </>
   );
 }
 

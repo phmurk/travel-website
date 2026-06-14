@@ -49,7 +49,7 @@
 
 .custom-input:focus {
   outline: none;
-  background-color: rgba(11, 43, 38, 0.171);
+  background-color: rgba(11, 43, 38, 0.808);
   border-color: var(--accent-color);
   box-shadow: 0 0 0 3px rgba(190, 182, 155, 0.15);
   color: var(--text-light);
