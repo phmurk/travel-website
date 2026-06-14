@@ -1,9 +1,15 @@
 import Hero from "../../components/Home/Hero/Hero";
+import Newsletter from "../../components/About/Newsletter/Newsletter";
+import PopularDestinations from "../../components/Home/Popular/PopularDestinations";
+import HotOffer from "../../components/Home/HotOffer/HotOffer";
 
 function Home() {
   return (
     <>
       <Hero />
+      <Newsletter />
+      <PopularDestinations />
+      <HotOffer />
     </>
   );
 }

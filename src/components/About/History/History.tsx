@@ -1,6 +1,6 @@
 import "./History.css";
 
-import HistoryImage from "../../assets/history.webp";
+import HistoryImage from "../../../assets/history.webp";
 
 const History = () => {
   return (

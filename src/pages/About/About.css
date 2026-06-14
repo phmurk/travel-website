@@ -1,0 +1,16 @@
+.about-hero {
+  background: linear-gradient(
+    135deg,
+    rgba(11, 60, 93, 0.5),
+    rgba(93, 244, 174, 0.5)
+  );
+}
+
+.about-text {
+  max-width: 700px;
+}
+
+.about-hero h2,
+p {
+  color: var(--text-dark);
+}

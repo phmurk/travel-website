@@ -1,0 +1,59 @@
+.popular-section {
+  padding: 80px 0;
+  /* background-color: var(--background-medium); */
+}
+
+.popular-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.popular-header h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.popular-header p {
+  color: #6c757d;
+}
+
+.popular-card {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.popular-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.popular-card:hover .popular-card-image {
+  transform: scale(1.08);
+}
+
+.popular-card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+}
+
+.popular-card-overlay h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.popular-card-overlay p {
+  margin: 0;
+  color: var(--text-light);
+}
