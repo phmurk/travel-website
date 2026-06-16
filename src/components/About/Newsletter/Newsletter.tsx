@@ -46,10 +46,13 @@ export default function Newsletter() {
       <div className="container">
         <div className="newsletter-wrapper">
           <div className="newsletter-content">
-            <h2>Будьте в курсе событий</h2>
+            <span className="newsletter-subtitle">PRIVILEGE CLUB</span>
+
+            <h2>Будьте в курсе лучших путешествий</h2>
+
             <p>
-              Подпишитесь на нашу рассылку, получайте лучшие предложения и
-              узнавайте первыми о скидках
+              Получайте эксклюзивные предложения, закрытые распродажи и
+              персональные подборки туров раньше остальных.
             </p>
           </div>
 

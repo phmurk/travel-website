@@ -15,8 +15,9 @@ const Footer: React.FC = () => {
               <span className="footer-logo-text">VOYAGER</span>
             </Link>
             <p className="footer-desc mb-4">
-              Премиум турагенство, предлагающее незабываемые путешествия по
-              всему миру с 2015 года.
+              Премиальное туристическое агентство, создающее уникальные
+              путешествия по всему миру. От уединённых вилл на Мальдивах до
+              экспедиций в самые редкие уголки планеты.
             </p>
             <div className="footer-socials">
               <a href="#" className="social-circle">

@@ -27,7 +27,9 @@ export default function HotOfferCard({ offer }: HotOfferCardProps) {
           <div className="hot-offer-prices">
             <span className="old-price">${offer.originalPrice}</span>
 
-            <span className="new-price">${offer.discountPrice}</span>
+            <span className="new-price-offer">${offer.discountPrice}</span>
+
+            {/* <span className="offer-btn">Подробнее →</span> */}
           </div>
         </div>
       </div>

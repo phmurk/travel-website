@@ -72,6 +72,20 @@ export interface ItineraryDay {
   day: number;
   title: string;
   description: string;
-  meals: string[]; // breakfast, lunch, dinner
+  meals: string[];
   accommodation: string;
+}
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  date: string;
+  category: string;
+  image: string;
+  slug: string;
+  readTime: number;
+  tags: string[];
 }

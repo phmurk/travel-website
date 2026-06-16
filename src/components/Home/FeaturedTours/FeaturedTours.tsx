@@ -14,6 +14,10 @@ export default function FeaturedTours() {
       <div className="container">
         <div className="featured-tours-header">
           <div>
+            <span className="featured-subtitle">
+              Рекомендуем путешественникам
+            </span>
+
             <h2 className="featured-tours-title">Популярные туры</h2>
 
             <p className="featured-tours-description">

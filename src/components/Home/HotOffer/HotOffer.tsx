@@ -8,11 +8,9 @@ export default function HotOffers() {
     <section className="hot-offers-section">
       <div className="container">
         <div className="hot-offers-header">
-          <span className="fire-icon">🔥</span>
-
-          <h2>Горячие предложения</h2>
-
-          <span className="fire-icon">🔥</span>
+          <span className="hot-offers-subtitle">Эксклюзивные предложения</span>
+          <h2>Горячие туры</h2>
+          <div className="hot-offers-divider"></div>
         </div>
 
         <HotOffersGrid offers={hotOffers} />
