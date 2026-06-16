@@ -2,14 +2,16 @@ import Hero from "../../components/Home/Hero/Hero";
 import Newsletter from "../../components/About/Newsletter/Newsletter";
 import PopularDestinations from "../../components/Home/Popular/PopularDestinations";
 import HotOffer from "../../components/Home/HotOffer/HotOffer";
+import FeaturedTours from "../../components/Home/FeaturedTours/FeaturedTours";
 
 function Home() {
   return (
     <>
       <Hero />
-      <Newsletter />
       <PopularDestinations />
       <HotOffer />
+      <FeaturedTours />
+      <Newsletter />
     </>
   );
 }

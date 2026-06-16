@@ -1,9 +1,5 @@
 .about-hero {
-  background: linear-gradient(
-    135deg,
-    rgba(11, 60, 93, 0.5),
-    rgba(93, 244, 174, 0.5)
-  );
+  background: linear-gradient(135deg, #0b3c5d80, #5df4ae80);
 }
 
 .about-text {
@@ -12,5 +8,5 @@
 
 .about-hero h2,
 p {
-  color: var(--text-dark);
+  color: var(--text-primary);
 }

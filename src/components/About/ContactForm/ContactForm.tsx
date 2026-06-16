@@ -87,7 +87,9 @@ const ContactForm: React.FC = () => {
     <section className="contact-form-wrapper">
       <div className="container-fluid max-w-container">
         <div className="form-container">
-          <h2 className="form-title">Напишите нам</h2>
+          <h2 className="form-title text-center">
+            Остались Вопросы? Напишите Нам!
+          </h2>
 
           {isSubmitted ? (
             <div className="form-success-message">

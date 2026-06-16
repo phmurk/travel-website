@@ -1,10 +1,10 @@
 .values-wrapper {
-  background-color: var(--background-dark);
+  background-color: var(--background-color);
   padding: 100px 0;
 }
 
-.section-title {
-  color: var(--text-light);
+.section-values-title {
+  color: #163042;
   font-size: 2.2rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -22,11 +22,7 @@
 
 .value-card {
   /* background-color: var(--background-medium); */
-  background: linear-gradient(
-    145deg,
-    var(--background-medium) 0%,
-    rgba(11, 43, 38, 0.3) 100%
-  );
+  background: linear-gradient(145deg, var(--text-primary) 0%, #0b3c5d 100%);
   border-radius: 16px;
   border: 1px solid rgba(190, 182, 155, 0.3);
   padding: 50px 30px;

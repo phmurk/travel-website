@@ -1,6 +1,6 @@
 .history-wrapper {
-  background-color: var(--background-dark);
-  color: var(--text-light);
+  background-color: var(--background-color);
+  /* color: var(--text-primary); */
   padding: 80px 0;
   overflow: hidden;
 }
@@ -45,11 +45,7 @@
   position: absolute;
   bottom: -20px;
   right: -20px;
-  background: linear-gradient(
-    135deg,
-    var(--primary-color) 0%,
-    var(--secondary-color) 100%
-  );
+  background: linear-gradient(135deg, #58d6c3be 0%, #43c7b4be 100%);
   border: 1px solid var(--text-light);
   border-radius: 50%;
   width: 140px;
@@ -85,7 +81,7 @@
 }
 
 .history-title {
-  color: var(--text-light);
+  color: var(--text-primary);
   font-size: 2.4rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -97,12 +93,12 @@
   width: 80px;
   height: 3px;
   background-color: var(--accent-color);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border-radius: 2px;
 }
 
 .history-text p {
-  color: var(--text-light);
+  color: var(--text-primary);
   font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: 20px;
@@ -114,7 +110,7 @@
 }
 
 .history-text strong {
-  color: var(--accent-color);
+  color: var(--primary-color);
   font-weight: 700;
 }
 

@@ -65,8 +65,8 @@ const FAQ: React.FC = () => {
       <div className="container-fluid max-w-container">
         <div className="text-center mb-5">
           <span className="faq-subtitle">Ответы на вопросы</span>
-          <h2 className="section-title">Часто задаваемые вопросы</h2>
-          <div className="title-separator mx-auto"></div>
+          <h2 className="section-faq-title">Часто задаваемые вопросы</h2>
+          <div className="title-faq-separator mx-auto"></div>
         </div>
 
         <div className="faq-accordion-container">

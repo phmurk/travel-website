@@ -29,7 +29,7 @@ const Values: React.FC = () => {
     <section className="values-wrapper">
       <div className="container-fluid max-w-container">
         <div className="text-center mb-5">
-          <h2 className="section-title">Наши ценности</h2>
+          <h2 className="section-values-title">Наши ценности</h2>
           <div className="title-separator mx-auto"></div>
         </div>
 
