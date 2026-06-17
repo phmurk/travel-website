@@ -8,7 +8,7 @@ const Contacts: React.FC = () => {
         <div className="text-center mb-5">
           <span className="contacts-subtitle">VOYAGER Premium Travel</span>
           <h2 className="section-title">Связаться с нами</h2>
-          <div className="title-separator mx-auto"></div>
+          <div className="title-separator"></div>
         </div>
 
         <div className="row g-4 justify-content-center">

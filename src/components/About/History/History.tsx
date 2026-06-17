@@ -24,8 +24,10 @@ const History = () => {
 
           <div className="col-lg-6">
             <div className="history-content-box">
-              <h2 className="history-title">Наша история</h2>
-              <div className="title-separator"></div>
+              <div className="text-center mb-3">
+                <h2 className="history-title">Наша история</h2>
+                <div className="title-separator"></div>
+              </div>
 
               <div className="history-text">
                 <p>

@@ -78,9 +78,6 @@ const Navbar: React.FC = () => {
           <Link to="/login" className="login-btn">
             Вход
           </Link>
-          <Link to="/register" className="register-btn">
-            Регистрация
-          </Link>
         </div>
 
         <div className="nav-right-mobile d-flex d-lg-none justify-content-end w-100">
@@ -118,7 +115,9 @@ const Navbar: React.FC = () => {
             <div className="logo-box">
               <span className="logo-letter">V</span>
             </div>
-            <span className="logo-text fs-5">VOYAGER</span>
+            <Link to="/" className="logo-text fs-5" onClick={closeOffcanvas}>
+              VOYAGER
+            </Link>
           </div>
           <button
             type="button"
@@ -177,13 +176,6 @@ const Navbar: React.FC = () => {
               onClick={closeOffcanvas}
             >
               Вход
-            </Link>
-            <Link
-              to="/register"
-              className="mobile-register-btn text-center"
-              onClick={closeOffcanvas}
-            >
-              Регистрация
             </Link>
           </div>
         </div>

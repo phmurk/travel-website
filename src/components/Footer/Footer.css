@@ -1,6 +1,11 @@
 .footer-wrapper {
   /* background: linear-gradient(180deg, #021010 0%, #010808 100%); */
-  background-color: #163832;
+  /* background-color: #163832; */
+
+  background: rgba(8, 22, 32, 0.92);
+  backdrop-filter: blur(16px);
+
+  border-bottom: 1px solid rgba(88, 214, 195, 0.12);
   color: var(--text-light);
   padding-top: 64px;
   border-top: 1px solid rgba(218, 241, 222, 0.08);

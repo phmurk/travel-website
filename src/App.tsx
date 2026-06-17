@@ -3,6 +3,7 @@ import { lazy } from "react";
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+const Auth = lazy(() => import("./components/Auth/Auth"));
 
 const Home = lazy(() => import("./pages/Home/Home"));
 const Tours = lazy(() => import("./pages/Tours/Tours"));
@@ -21,6 +22,7 @@ function App() {
         <Route path="/tours" element={<Tours />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/login" element={<Auth />} />
       </Routes>
       <Footer />
     </BrowserRouter>

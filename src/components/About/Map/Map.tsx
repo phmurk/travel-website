@@ -8,7 +8,7 @@ const Map: React.FC = () => {
         <div className="text-center mb-5">
           <span className="map-subtitle">Ждем вас в гости</span>
           <h2 className="section-title">Мы на карте</h2>
-          <div className="title-separator mx-auto"></div>
+          <div className="title-separator"></div>
         </div>
 
         <div className="map-container">

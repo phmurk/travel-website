@@ -1,10 +1,10 @@
 .values-wrapper {
-  background-color: var(--background-color);
+  background: linear-gradient(180deg, #051f20 0%, #031414 100%);
   padding: 100px 0;
 }
 
 .section-values-title {
-  color: #163042;
+  color: white;
   font-size: 2.2rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -12,37 +12,48 @@
   margin-bottom: 15px;
 }
 
-.title-separator.mx-auto {
-  width: 80px;
-  height: 3px;
-  background-color: var(--accent-color);
-  margin-bottom: 40px;
-  border-radius: 2px;
+.title-separator {
+  width: 100px;
+  height: 4px;
+  margin: 0 auto;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-color),
+    transparent
+  );
+  margin: auto;
 }
 
 .value-card {
-  /* background-color: var(--background-medium); */
-  background: linear-gradient(145deg, var(--text-primary) 0%, #0b3c5d 100%);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(218, 241, 222, 0.08);
+  backdrop-filter: blur(12px);
   border-radius: 16px;
-  border: 1px solid rgba(190, 182, 155, 0.3);
-  padding: 50px 30px;
+  padding: 45px 30px;
   text-align: center;
   transition: all 0.4s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+.value-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(190, 182, 155, 0.06), transparent);
+  opacity: 0;
+  transition: 0.35s;
 }
 
 .value-card:hover {
-  border-color: var(--accent-color);
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(5, 31, 32, 0.5);
+  transform: translateY(-8px);
+  border-color: rgba(218, 241, 222, 0.25);
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(190, 182, 155, 0.08);
 }
 
-.stat-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(190, 182, 155, 0.5);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+.value-card:hover::before {
+  opacity: 1;
 }
 
 .value-number-wrapper {
@@ -61,10 +72,12 @@
   display: block;
   clip-path: inset(0 0 15% 0);
   margin-bottom: -10px;
+
+  -webkit-text-stroke: 1px rgba(190, 182, 155, 0.5);
 }
 
 .value-title {
-  color: var(--text-light);
+  color: white;
   font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 15px;
@@ -73,16 +86,23 @@
 }
 
 .value-text {
-  color: var(--text-light);
-  opacity: 0.7;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 0.95rem;
   line-height: 1.7;
-  margin-bottom: 0;
+  margin: 0;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   .value-card {
     padding: 40px 24px;
+  }
+
+  .values-wrapper {
+    padding: 80px 0;
+  }
+
+  .section-values-title {
+    font-size: 2.4rem;
   }
 }
 
@@ -91,8 +111,12 @@
     padding: 70px 0;
   }
 
-  .section-title {
+  .section-values-title {
     font-size: 1.8rem;
+  }
+
+  .value-card {
+    padding: 35px 25px;
   }
 
   .value-number {

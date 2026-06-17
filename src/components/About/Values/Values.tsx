@@ -30,7 +30,7 @@ const Values: React.FC = () => {
       <div className="container-fluid max-w-container">
         <div className="text-center mb-5">
           <h2 className="section-values-title">Наши ценности</h2>
-          <div className="title-separator mx-auto"></div>
+          <div className="title-separator"></div>
         </div>
 
         <div className="row g-4 justify-content-center">
