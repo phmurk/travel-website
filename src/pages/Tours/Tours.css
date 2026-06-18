@@ -1,0 +1,186 @@
+.tours-page-wrapper {
+  background: linear-gradient(180deg, #031414 0%, #051f20 100%);
+  min-height: 100vh;
+  /* padding-bottom: 80px; */
+}
+
+.tours-page-header {
+  padding: 80px 0 40px;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(190, 182, 155, 0.1);
+  margin-bottom: 40px;
+}
+
+.page-title {
+  color: white;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.page-subtitle {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* --- Сайдбар (Glassmorphism) --- */
+.filters-sidebar {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(218, 241, 222, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 30px 25px;
+}
+
+.filters-title {
+  color: var(--accent-color);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.filter-group {
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.filter-group:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.filter-label {
+  display: block;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.filter-search-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(190, 182, 155, 0.2);
+  color: white;
+  padding: 12px 15px;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.filter-search-input:focus {
+  border-color: var(--accent-color);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Кастомные чекбоксы и радио-кнопки */
+.checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.custom-checkbox,
+.custom-radio {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.custom-checkbox:hover,
+.custom-radio:hover {
+  color: white;
+}
+
+.custom-checkbox input,
+.custom-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark,
+.radio-mark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(190, 182, 155, 0.4);
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.radio-mark {
+  border-radius: 50%;
+}
+
+.custom-checkbox input:checked ~ .checkmark,
+.custom-radio input:checked ~ .radio-mark {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+/* Туулбар с сортировкой */
+.tours-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(190, 182, 155, 0.15);
+  padding: 15px 25px;
+  border-radius: 12px;
+}
+
+.results-count {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.results-count strong {
+  color: var(--accent-color);
+}
+
+.custom-select {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  border: 1px solid rgba(190, 182, 155, 0.3);
+  padding: 8px 15px;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+}
+
+.custom-select option {
+  background: var(--background-dark);
+  color: white;
+}
+
+.mobile-filter-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--background-medium);
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.reset-filters-btn {
+  background: var(--accent-color);
+  color: var(--background-dark);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+}

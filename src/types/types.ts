@@ -30,7 +30,7 @@ export interface Hotel {
   name: string;
   stars: number; // 3-5
   distanceToSea: number; // в метрах
-  seaType: "beach" | "river" | "lake" | "none" | "mountin";
+  seaType: "beach" | "river" | "lake" | "none" | "mountain" | "city";
   description: string;
   amenities: string[];
   image: string;
@@ -88,4 +88,34 @@ export interface BlogPost {
   slug: string;
   readTime: number;
   tags: string[];
+}
+
+export interface Review {
+  id: string;
+  tourId: string;
+  author: string;
+  avatar: string;
+  rating: number;
+  title: string;
+  content: string;
+  date: string;
+  verified: boolean;
+  helpful: number;
+}
+
+export interface OrderItem {
+  tourId: string;
+  title: string;
+  quantity: number;
+  price: number;
+}
+
+export interface Order {
+  id: string;
+  userId: string;
+  items: OrderItem[];
+  totalPrice: number;
+  status: "pending" | "completed" | "cancelled";
+  createdAt: string;
+  travelDate: string;
 }
