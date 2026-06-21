@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Offcanvas } from "bootstrap";
 import "./Navbar.css";
-import { useCartStore } from "../../data/store";
+import { useCartStore } from "../../store/store";
 
 const Navbar: React.FC = () => {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -53,6 +53,7 @@ const Navbar: React.FC = () => {
           </Link>
         </div>
 
+        {/* НАВИГАЦИЯ ДЛЯ ПК */}
         <nav className="nav-center d-none d-lg-flex">
           <Link to="/tours" className="nav-item">
             Туры
@@ -60,8 +61,12 @@ const Navbar: React.FC = () => {
           <Link to="/blog" className="nav-item">
             Блог
           </Link>
+          {/* НОВАЯ ССЫЛКА НА ОБСУЖДЕНИЯ */}
+          <Link to="/discussions" className="nav-item">
+            Обсуждения
+          </Link>
           <Link to="/about" className="nav-item">
-            О нас
+            Мы
           </Link>
         </nav>
 
@@ -102,7 +107,6 @@ const Navbar: React.FC = () => {
               xmlns="http://www.w3.org/2000/svg"
               width="32"
               height="32"
-              //   fill="#daf1de"
               className="bi bi-list navbar-list"
               viewBox="0 0 16 16"
             >
@@ -153,12 +157,20 @@ const Navbar: React.FC = () => {
             >
               Блог
             </Link>
+            {/* НОВАЯ ССЫЛКА НА ОБСУЖДЕНИЯ (МОБИЛКА) */}
+            <Link
+              to="/discussions"
+              className="mobile-nav-item"
+              onClick={closeOffcanvas}
+            >
+              Обсуждения
+            </Link>
             <Link
               to="/about"
               className="mobile-nav-item"
               onClick={closeOffcanvas}
             >
-              О нас
+              Мы
             </Link>
             <Link
               to="/cart"

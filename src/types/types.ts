@@ -119,3 +119,23 @@ export interface Order {
   createdAt: string;
   travelDate: string;
 }
+
+export interface Reply {
+  id: string;
+  author: string;
+  avatar: string;
+  content: string;
+  createdAt: string;
+}
+
+export interface Discussion {
+  id: string;
+  title: string;
+  content: string;
+  author: string;
+  avatar: string;
+  repliesCount: number;
+  viewsCount: number;
+  createdAt: string;
+  replies: Reply[];
+}

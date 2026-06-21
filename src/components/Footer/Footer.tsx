@@ -105,6 +105,9 @@ const Footer: React.FC = () => {
                 <Link to="/blog">Блог</Link>
               </li>
               <li>
+                <Link to="/discussions">Обсуждения</Link>
+              </li>
+              <li>
                 <Link to="/about">О нас</Link>
               </li>
             </ul>

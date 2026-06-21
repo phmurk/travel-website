@@ -1,0 +1,273 @@
+/* Общие стили страниц */
+.blog-page-wrapper,
+.discussion-page-wrapper {
+  background: linear-gradient(180deg, #031414 0%, #051f20 100%);
+  min-height: 100vh;
+  padding: 80px 0 40px;
+}
+
+.text-muted-light {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.new-topic-btn {
+  background: var(--accent-color);
+  color: var(--background-dark);
+  border: 1px solid var(--accent-color);
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 15px rgba(190, 182, 155, 0.1);
+}
+
+.new-topic-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(190, 182, 155, 0.3);
+  background: transparent;
+  color: var(--accent-color);
+}
+
+.new-topic-btn:active {
+  transform: translateY(0);
+}
+
+/* --- Кнопка "Назад" / "Ко всем темам" --- */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background: rgba(190, 182, 155, 0.05); /* Легкий бежевый фон */
+  border: 1px solid rgba(190, 182, 155, 0.2);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.back-link:hover {
+  background: rgba(190, 182, 155, 0.15);
+  color: #ffffff;
+  transform: translateX(-5px); /* Кнопка тянется влево при наведении */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Кнопки действия (Опубликовать, Ответить) --- */
+.action-btn {
+  background: var(--accent-color);
+  color: var(--background-dark);
+  border: 1px solid var(--accent-color);
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 15px rgba(190, 182, 155, 0.15);
+}
+
+.action-btn:hover:not(:disabled) {
+  transform: translateY(-3px); /* Кнопка поднимается */
+  box-shadow: 0 10px 25px rgba(190, 182, 155, 0.3);
+  background: transparent;
+  color: var(--accent-color);
+}
+
+.action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Элементы управления (Табы, кнопки) */
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0 0 15px 0;
+  position: relative;
+  transition: 0.3s;
+}
+.tab-btn:hover {
+  color: white;
+}
+.tab-btn.active {
+  color: var(--accent-color);
+}
+.tab-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 3px 3px 0 0;
+}
+
+/* Glassmorphism Карточки */
+.glass-card,
+.post-content-card,
+.discussion-card,
+.auth-prompt-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(218, 241, 222, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+/* Карточка Обсуждения (Список) */
+.discussion-card {
+  display: block;
+  padding: 25px;
+  text-decoration: none;
+}
+.discussion-card:hover {
+  border-color: rgba(190, 182, 155, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-3px);
+}
+.discussion-title {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.discussion-card:hover .discussion-title {
+  color: var(--accent-color);
+}
+.discussion-excerpt {
+  color: rgba(255, 255, 255, 0.7);
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Поля ввода */
+.search-box input,
+.custom-input,
+.custom-textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(190, 182, 155, 0.2);
+  color: white;
+  padding: 14px 20px;
+  border-radius: 12px;
+  outline: none;
+  transition: 0.3s;
+}
+.search-box input:focus,
+.custom-input:focus,
+.custom-textarea:focus {
+  border-color: var(--accent-color);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* --- Стили для Threads (DiscussionPage) --- */
+.thread-message {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.thread-avatar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45px;
+}
+.thread-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(190, 182, 155, 0.5);
+  z-index: 2;
+  background: var(--background-dark);
+}
+.thread-line {
+  flex-grow: 1;
+  width: 2px;
+  background: rgba(190, 182, 155, 0.2);
+  margin-top: 5px;
+  min-height: 20px;
+}
+.thread-content-col {
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 16px;
+}
+
+/* Статья (BlogPost) */
+.post-hero {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.post-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, #031414 100%);
+}
+.post-content-card {
+  padding: 50px;
+}
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  background: var(--accent-color);
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.post-badge {
+  background: rgba(190, 182, 155, 0.15);
+  color: var(--accent-color);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.tag-pill {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+.pill-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.pill-btn:hover,
+.pill-btn.active {
+  background: var(--accent-color);
+  color: #031414;
+  border-color: var(--accent-color);
+}

@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { MOCK_TOURS } from "../../data/tours";
 import { MOCK_REVIEWS } from "../../data/reviews";
 import { generateHotelsForTour } from "../../data/hotel-generator";
-import { useCartStore } from "../../data/store"; // Ваш Zustand store
+import { useCartStore } from "../../store/store"; // Ваш Zustand store
 import TourCard from "../../components/TourCard/TourCard"; // Ваш компонент карточки
 import "./TourDetail.css";
 

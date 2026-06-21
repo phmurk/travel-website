@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useCartStore } from "../../data/store";
+import { useCartStore } from "../../store/store";
 import "./Cart.css";
 
 const Cart: React.FC = () => {
