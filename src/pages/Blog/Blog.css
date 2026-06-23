@@ -6,6 +6,11 @@
   padding: 80px 0 40px;
 }
 
+.blog-post-wrapper {
+  background: linear-gradient(180deg, #031414 0%, #051f20 100%);
+  min-height: 100vh;
+}
+
 .text-muted-light {
   color: rgba(255, 255, 255, 0.6);
 }

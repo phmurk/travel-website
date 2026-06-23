@@ -1,0 +1,209 @@
+.profile-page-wrapper {
+  background: linear-gradient(180deg, #031414 0%, #051f20 100%);
+  min-height: 100vh;
+}
+
+.text-muted-light {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.fs-7 {
+  font-size: 0.85rem;
+}
+
+/* Glassmorphism Карточка (универсальная) */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(218, 241, 222, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+/* --- САЙДБАР (Левая панель) --- */
+.profile-sidebar {
+  padding: 40px 30px;
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  background: var(--accent-color);
+  color: var(--background-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  box-shadow: 0 5px 15px rgba(190, 182, 155, 0.3);
+}
+
+/* Редактирование имени */
+.edit-icon-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-icon-btn:hover {
+  color: var(--accent-color);
+}
+
+.action-btn-sm {
+  background: var(--accent-color);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.cancel-btn-sm {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 0.85rem;
+}
+
+/* Кнопка выхода */
+.logout-btn {
+  background: rgba(220, 53, 69, 0.1); /* Красный с прозрачностью */
+  color: #ff6b6b;
+  border: 1px solid rgba(220, 53, 69, 0.3);
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: rgba(220, 53, 69, 0.2);
+  color: #ff8787;
+}
+
+/* --- ВКЛАДКИ (Табы) --- */
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 0 0 15px 0;
+  position: relative;
+  transition: 0.3s;
+}
+
+.tab-btn:hover {
+  color: white;
+}
+.tab-btn.active {
+  color: var(--accent-color);
+}
+.tab-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 3px 3px 0 0;
+}
+
+/* --- Вкладка: ТУРЫ --- */
+.hover-accent:hover {
+  color: var(--accent-color) !important;
+}
+
+.status-badge {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+.status-badge.success {
+  background: rgba(40, 167, 69, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.favorite-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(190, 182, 155, 0.3);
+}
+
+.fav-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* --- Вкладка: АКТИВНОСТЬ (ОБСУЖДЕНИЯ) --- */
+.activity-card {
+  display: block;
+}
+
+.activity-card:hover {
+  transform: translateX(5px);
+  border-color: rgba(190, 182, 155, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.activity-type-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.activity-type-badge.discussion {
+  background: rgba(190, 182, 155, 0.15);
+  color: var(--accent-color);
+  border: 1px solid rgba(190, 182, 155, 0.3);
+}
+
+.activity-type-badge.reply {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Обрезка текста (чтобы не занимал много места) */
+.truncate-text {
+  display: -webkit-box;
+  line-clamp: 2; /* Максимум 2 строки */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Анимация при переключении табов */
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 991px) {
+  .profile-sidebar {
+    position: static !important;
+    margin-bottom: 20px;
+  }
+}
